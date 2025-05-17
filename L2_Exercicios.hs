@@ -77,7 +77,18 @@ auxUnico :: [Int] -> [Int] -> [Int]
 auxUnico [] y = []
 auxUnico (x:xs) y
 	| conta x y > 1 = auxUnico xs y
-	| otherwise = x : auxUnico xs y  
+	| otherwise = x : auxUnico xs y
+	
+	
+quickSort :: [Int] -> [Int]
+quickSort [] = []
+quickSort (x:xs) = quickSort(menores x xs) ++ [x] ++ quickSort(maiores x xs)
+
+menores :: Int -> [Int] -> [Int]
+menores c [] = []
+menores c (x:xs)
+	| c > x = x : menores c xs
+	| otherwise = menores c xs  
 	
 
 

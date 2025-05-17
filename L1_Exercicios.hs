@@ -1,7 +1,3 @@
--- exercicio.hs
--- comentario
-
-
 idade :: Int -- Um valor inteiro constante
 idade = 17
 
@@ -39,12 +35,10 @@ menorTres a b c
 
 fatorial :: Int -> Int
 fatorial 0 = 1
-fatorial 1 = 1
 fatorial n = n * fatorial (n-1)
 
 potencia :: Int -> Int -> Int  -- Ordem: Base Expoente
 potencia x 0 = 1
-potencia x 1 = x
 potencia x y = x * potencia x (y-1)
 
 quatroIguais :: Int -> Int -> Int -> Int -> Bool
